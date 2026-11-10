@@ -10,7 +10,7 @@ export const App: React.FC = () => {
   const { activeTab } = useUniSchedStore();
 
   return (
-    <div className="min-h-screen bg-[#070D1E] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 flex flex-col font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -20,11 +20,13 @@ export const App: React.FC = () => {
         {activeTab === 'catalog' && <CourseCatalogView />}
       </main>
 
-      <footer className="border-t border-slate-800/80 bg-[#0B132B]/80 py-6 text-center text-xs text-slate-500">
+      <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© 2026 UniSched — Intelligent Academic Timetable Constraint Engine (CSP)</p>
-          <p className="font-mono text-[11px] text-slate-400">
-            Client-Side Backtracking • In-Browser CSP Solver • Zero Server Footprint
+          <p className="font-semibold text-slate-800">
+            © 2026 UniSched • Academic Timetable Optimization & Constraint Solving
+          </p>
+          <p className="font-mono text-[11px] text-slate-500">
+            Backtracking Constraint Satisfaction Engine • In-Browser Optimization
           </p>
         </div>
       </footer>
