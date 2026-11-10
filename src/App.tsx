@@ -8,27 +8,17 @@ import { useUniSchedStore } from './store/useUniSchedStore';
 
 export const App: React.FC = () => {
   const { activeTab } = useUniSchedStore();
-
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 flex flex-col font-sans selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-1 w-full max-w-[1320px] mx-auto px-4 md:px-8 py-8">
         {activeTab === 'calendar' && <WeeklyCalendar />}
         {activeTab === 'generator' && <OptimizerStudio />}
         {activeTab === 'comparison' && <ScheduleComparisonView />}
         {activeTab === 'catalog' && <CourseCatalogView />}
       </main>
-
-      <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-semibold text-slate-800">
-            © 2026 UniSched • Academic Timetable Optimization & Constraint Solving
-          </p>
-          <p className="font-mono text-[11px] text-slate-500">
-            Backtracking Constraint Satisfaction Engine • In-Browser Optimization
-          </p>
-        </div>
+      <footer className="max-w-[1320px] w-full mx-auto px-4 md:px-8 py-6 text-[13px] text-steel">
+        Timetables are solved in your browser by a backtracking search over section times. Your week is saved on this device.
       </footer>
     </div>
   );
